@@ -24,7 +24,15 @@
                 Bem-vindo ao meu portifólio!
             </p>
         </div>
-        <div class="menu"></div>
+        <div class="menu">
+            <div class="option option-1"></div>
+            <div class="option option-2"></div>
+            <div class="option option-3"></div>
+            <div class="option option-4"></div>
+            <div class="option option-5"></div>
+            <div class="option option-6"></div>
+            <div class="option option-7"></div>
+        </div>
     </div>
 </body>
 
@@ -73,6 +81,95 @@
     /* .menu { 
         background-color: #f0f0f0; 
     } */
+
+    .menu {
+        display: grid; 
+        justify-self: center;
+
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        padding: 2vh;
+        width: 55vw;        
+    }
+    
+    .option {
+        margin: 1%;
+        background-color: #212121;
+        border: solid 1px #424242;
+        border-radius: 20px;
+
+        cursor: pointer;
+    }
+
+    .option:hover {
+        background-color: #2c2c2c;
+    }
+
+    .option-1 {
+        grid-row-start: 1;
+        grid-column-start: 1;
+
+        grid-row-end: 2;
+        grid-column-end: 4;
+   
+    }
+
+    .option-2 {
+
+        grid-row-start: 1;
+        grid-column-start: 4;
+
+        grid-row-end: 2;
+        grid-column-end: 7;
+   
+    }
+
+    .option-3 {
+        grid-row-start: 2;
+        grid-column-start: 1;
+
+        grid-row-end: 3;
+        grid-column-end: 4;
+   
+    }
+
+    .option-4 {
+        grid-row-start: 2;
+        grid-column-start: 4;
+
+        grid-row-end: 3;
+        grid-column-end: 7;
+   
+    }
+
+    .option-5 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+
+        grid-row-end: 4;
+        grid-column-end: 3;
+   
+    }
+
+    .option-6 {
+        grid-row-start: 3;
+        grid-column-start: 3;
+
+        grid-row-end: 4;
+        grid-column-end: 5;
+   
+    }
+
+    .option-7 {
+        grid-row-start: 3;
+        grid-column-start: 5;
+
+        grid-row-end: 4;
+        grid-column-end: 7;
+   
+    }
+
 
     @media (max-width: 768px) {
         .title-main {
