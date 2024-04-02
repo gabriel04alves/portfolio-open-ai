@@ -3,37 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./assets/main.css">
     <link rel="shortcut icon" href="./assets/images/logo-openai.svg" type="image/x-icon">
-    <script src="./js/script.js"></script>
-    <title>Portifólio pessoal - OpenAI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-
+    <title>Portifólio pessoal - OpenAI</title>
 </head>
 <body>
     <div class="header">
         <p class="title-header">ChatGPT</p>
         <p class="text-weak">4</p>
         <i class="bi bi-chevron-down text-weak" 
-            style="
-                font-size: 0.8rem; 
-                align-self: center;"
-        >
+            style="font-size: 0.8rem;">
         </i>
+    </div>
+    <div class="content">
+        <div class="title-main">
+            <img src="./assets/images/logo-openai.svg" alt="">
+            <p>
+                Bem-vindo ao meu portifólio!
+            </p>
+        </div>
+        <div class="menu"></div>
     </div>
 </body>
 
 <style>
+    body {
+        height: 100%;
+        user-select: none;
+    }
+    
     .header {
         display: flex;
-        color: #FFF;
+        align-items: center;
         padding: 2vh;
         gap: 0.3rem;
+        height: 3vh;
+        
         font-weight: 600;
+        font-size: 1.3rem;
+        color: #FFF;
     }
+    
     .text-weak {
         color: #B4B4B4;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 93vh;  
+    }
+
+    .title-main { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        
+        font-weight: 600;
+        font-size: 1.8rem;
+        
+        color: #FFF;
+    }
+    
+    /* .menu { 
+        background-color: #f0f0f0; 
+    } */
+
+    @media (max-width: 768px) {
+        .title-main {
+            font-size: 1.5rem;
+        }
     }
 </style>
 </html>
