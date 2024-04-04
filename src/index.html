@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/script.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/main.css">
     <link rel="stylesheet" href="./assets/index.css">
     <link rel="shortcut icon" href="./assets/images/logo-openai.svg" type="image/x-icon">
@@ -11,23 +12,33 @@
     <title>Portifólio pessoal - OpenAI</title>
 </head>
 <body>
-    <div class="header">
-        <p class="title-header">ChatGPT</p>
+    <div class="header"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+    >
+        <p class="title-header">
+            ChatGPT
+        </p>
         <p class="text-weak">4</p>
         <i class="bi bi-chevron-down text-weak" 
             style="font-size: 0.8rem;">
         </i>
     </div>
     <div class="content">
-        <div class="title-main">
+        <div class="title-main"
+            data-aos="zoom-in-up"
+            data-aos-duration="2000"
+        >
             <img src="./assets/images/logo-openai.svg" alt="">
             <p>
                 Bem-vindo ao meu portifólio!
             </p>
         </div>
         <div class="menu">
-            <div class="line">
-
+            <div class="line"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                >
                 <a href="./index.html" class="option">
                     <div class="text-menu-option">
                         <div class="title-menu-option">
@@ -63,7 +74,10 @@
                         alt="">
                 </a>
             </div>
-            <div class="line">
+            <div class="line"
+                data-aos="fade-up"  
+                data-aos-duration="1500"
+            >
 
                 <a href="./index.html" class="option">
                     <div class="text-menu-option">
@@ -100,7 +114,10 @@
                         alt="">
                 </a>
             </div>
-            <div class="last-line-menu">
+            <div class="last-line-menu"
+                data-aos="fade-up"  
+                data-aos-duration="1000"
+            >
                 <a href="./index.html" class="option">
                     <div class="text-menu-option">
                         <div class="title-menu-option">
@@ -135,8 +152,11 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
-
+<script>
+    AOS.init();
+  </script>
 <style>
 </style>
 </html>
