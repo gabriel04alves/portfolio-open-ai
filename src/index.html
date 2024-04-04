@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./assets/main.css">
     <link rel="shortcut icon" href="./assets/images/logo-openai.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -25,7 +25,7 @@
             </p>
         </div>
         <div class="menu">
-            <a href="./index.html" class="option option-1">
+            <a class="option option-1">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>DALL-E 3</b>
@@ -42,7 +42,7 @@
                         " 
                     alt="">         
             </a>
-            <a href="./index.html" class="option option-2">
+            <a class="option option-2">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>Sora</b>
@@ -59,14 +59,14 @@
                     " 
                     alt="">
             </a>
-            <a href="./index.html" class="option option-3">
+            <a class="option option-3">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>GitHub Copilot</b>
                     </div>
                     <div class="subtitle-menu-option">
                         é um assistente de codificação alimentado 
-                        por IA que ajuda a escrever código de 
+                        por IA que ajuda a escrever código de 
                         forma mais rápida.
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     " 
                     alt="">
             </a>
-            <a href="./index.html" class="option option-4">
+            <a class="option option-4">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>Duolingo Max</b>
@@ -93,7 +93,7 @@
                     " 
                     alt="">
             </a>
-            <a href="./index.html" class="option option-5">
+            <a class="option option-5">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>Quem sou eu?</b>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </a>
-            <a href="./index.html" class="option option-6">
+            <a class="option option-6">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>Habilidades</b>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </a>
-            <a href="./index.html" class="option option-7">
+            <a class="option option-7">
                 <div class="text-menu-option">
                     <div class="title-menu-option">
                         <b>Meus projetos</b>
@@ -169,20 +169,15 @@
         
         color: #FFF;
     }
-    
-    /* .menu { 
-        background-color: #f0f0f0; 
-    } */
 
     .menu {
         display: grid; 
         justify-self: center;
-
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-
         padding: 2vh;
-        width: 55vw;        
+        height: 300px;
+        width: 55vw;
     }
     
     .option {
@@ -228,17 +223,13 @@
     .option-1 {
         grid-row-start: 1;
         grid-column-start: 1;
-
         grid-row-end: 2;
         grid-column-end: 4;
-   
     }
 
     .option-2 {
-
         grid-row-start: 1;
         grid-column-start: 4;
-
         grid-row-end: 2;
         grid-column-end: 7;
    
@@ -247,7 +238,6 @@
     .option-3 {
         grid-row-start: 2;
         grid-column-start: 1;
-
         grid-row-end: 3;
         grid-column-end: 4;
    
@@ -268,6 +258,7 @@
 
         grid-row-end: 4;
         grid-column-end: 3;
+        height: 4.5rem;
    
     }
 
@@ -277,18 +268,16 @@
 
         grid-row-end: 4;
         grid-column-end: 5;
-   
+        height: 4.5rem;
     }
 
     .option-7 {
         grid-row-start: 3;
         grid-column-start: 5;
-
         grid-row-end: 4;
         grid-column-end: 7;
-   
+        height: 4.5rem;
     }
-
 
     @media (max-width: 768px) {
         .title-main {
