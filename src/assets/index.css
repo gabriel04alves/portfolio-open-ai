@@ -49,6 +49,20 @@ body {
     padding: 0 0 5vh 0;
 }
 
+.prompt {
+    color: #fff;
+}
+
+.typewriter {
+    color: #fff;
+}
+
+.blinking-cursor {
+    margin-left: 5px;
+    background-color: #fff;
+    animation: blink 1s infinite;
+}
+
 .option {
     display: flex;
     justify-content: space-between;

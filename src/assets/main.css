@@ -14,19 +14,6 @@ body {
     background-color: #212121;
 }
 
-.prompt {
-    color: #fff;
-}
-
-.typewriter {
-    color: #fff;
-}
-
-.blinking-cursor {
-    margin-left: 5px;
-    background-color: #fff;
-    animation: blink 1s infinite;
-}
 
 @keyframes blink {
 
