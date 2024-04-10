@@ -22,38 +22,51 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.style.display = 'block';
     }
 
+    function switchDiv() {
+        const div = document.getElementById('title-main')
+        div.style.display = "none";
+    }
+
     option1.addEventListener('click', function(event) {
         event.preventDefault();
         type("This is a ChatGPT-like typing effect, simulating human typing with random delays and a blinking cursor. It also supports multiline text and ensures the cursor is displayed at the end of the last output character.");
+        switchDiv()
+
     });
 
     option2.addEventListener('click', function(event) {
         event.preventDefault();
         type("Sora");
+        switchDiv()
     });
 
     option3.addEventListener('click', function (event) {
         event.preventDefault();
         type("Github Copilot");
+        switchDiv()
     });
 
     option4.addEventListener('click', function (event) {
         event.preventDefault();
         type("Duolingo Max");
+        switchDiv()
     });
 
     option5.addEventListener('click', function (event) {
         event.preventDefault();
         type("Quem sou eu?");
+        switchDiv()
     });
 
     option6.addEventListener('click', function (event) {
         event.preventDefault();
         type("Habilidades");
+        switchDiv()
     });
 
     option7.addEventListener('click', function (event) {
         event.preventDefault();
         type("Meus projetos");
+        switchDiv()
     });
 });
