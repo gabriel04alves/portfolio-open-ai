@@ -17,7 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
             }
         }
-        // start typing
+        typing();
+        menu.style.display = 'block';
+    }
+    function question(text) {
+        menu.innerHTML = "<div id='typequestion'></div>";
+        const typequestion = document.getElementById('typequestion');
+        typequestion.style.color = 'white';
+        let index = 0;
+        function typing() {
+            if (index < text.length) {
+            typequestion.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
+                index++;
+                setTimeout(typing, Math.random() * 15);
+            } else {
+            typequestion.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
+            }
+        }
         typing();
         menu.style.display = 'block';
     }
@@ -28,10 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     option1.addEventListener('click', function(event) {
-        event.preventDefault();
-        type("This is a ChatGPT-like typing effect, simulating human typing with random delays and a blinking cursor. It also supports multiline text and ensures the cursor is displayed at the end of the last output character.");
-        switchDiv()
+    event.preventDefault();
 
+    question("isso é uma pergunta"); 
+    setTimeout(function() {
+        type("This is a ChatGPT-like typing effect, simulating human typing with random delays and a blinking cursor. It also supports multiline text and ensures the cursor is displayed at the end of the last output character.");
+    }, 3000); 
+    switchDiv();
     });
 
     option2.addEventListener('click', function(event) {
