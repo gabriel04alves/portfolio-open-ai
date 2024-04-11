@@ -14,7 +14,7 @@ body {
     color: #333;
 }
 
-#typewriter{
+/* #typewriter{
         padding: 10px;
         margin-bottom: 10px;
         font-family: Arial, sans-serif;
@@ -31,7 +31,42 @@ body {
         line-height: 1.4;
         color: #CECECE;
         max-width: 692px;
+} */
 
+.content-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 93vh;
+    width: 100%;
+    gap: 5vh;
+}
+
+.question-div {
+    display: flex;
+    gap: 1vh;
+}
+
+.answer-div {
+    display: flex;
+    gap: 1vh;
+}
+
+.user-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1vh 0;
+}
+
+.text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 50vw;
+}
+
+
+.icon-user {
+    font-size: 2.5vh;
 }
 
 .header {

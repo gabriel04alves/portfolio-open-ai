@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const [option1, option2, option3, option4, option5, option6, option7] = document.querySelectorAll('.option');
     const menu = document.querySelector('.menu');
-    const title_main = document.querySelector('.title-main>p');
-
+   
     function type(text) {
         menu.innerHTML = "<div id='typewriter'></div>";
         const typewriter = document.getElementById('typewriter');
@@ -20,73 +19,67 @@ document.addEventListener('DOMContentLoaded', function() {
         typing();
         menu.style.display = 'block';
     }
-    function question(text) {
-    const newText = "<strong>You </strong>" + text; 
-        menu.innerHTML = "<div id='typequestion'></div>";
-        const typequestion = document.getElementById('typequestion');
-        typequestion.style.color = 'white';
-        let index = 0;
-        function typing() {
-            if (index < newText.length) {
-                typequestion.innerHTML = newText.slice(0, index) + '<span class="blinking-cursor">||</span>';
-                index++;
-                setTimeout(typing, Math.random() * 15);
-            } else {
-                typequestion.innerHTML = newText.slice(0, index) + '<span class="blinking-cursor">||</span>';
-            }
-        }
-        typing();
-        menu.style.display = 'block';
-    }
 
     function switchDiv() {
         const div = document.getElementById('title-main')
         div.style.display = "none";
     }
 
-    option1.addEventListener('click', function(event) {
-    event.preventDefault();
+    function template(question, answer) {
+        content = {
+            question: question,
+            answer: answer
+        }
+        switchDiv();
+        return `
+        <div class="content-hover">
+            <div class="question-div">
+                <i class="icon-user bi bi-person-circle"></i>
+                <div class="text">
+                    <p class="user-text">You</p>
+                    <p class="text">${question}</p> 
+                </div>
+            </div>
+            <div class="answer-div">
+                <i class="icon-user bi bi-person-circle"></i>
+                <div class="text">
+                    <p class="user-text">ChatGPT</p>
+                    <p class="text">${answer}</p>
+                </div>
+            </div>    
+        </div>
+            `
+    }
 
-    question("isso é uma pergunta"); 
-    setTimeout(function() {
-        type("This is a ChatGPT-like typing effect, simulating human typing with random delays and a blinking cursor. It also supports multiline text and ensures the cursor is displayed at the end of the last output character.");
-    }, 3000); 
-    switchDiv();
+    option1.addEventListener('click', function(event) {
+        event.preventDefault();
+        type(template(
+            'Conte me sobre o Dall E-3', 
+            'O ChatGPT, integrado com o DALL·E 3, é uma ferramenta que permite aos usuários transformar descrições textuais em imagens detalhadas e precisas.'
+        ));
     });
 
     option2.addEventListener('click', function(event) {
-        event.preventDefault();
-        type("Sora");
-        switchDiv()
+        
     });
 
     option3.addEventListener('click', function (event) {
-        event.preventDefault();
-        type("Github Copilot");
-        switchDiv()
+       
     });
 
     option4.addEventListener('click', function (event) {
-        event.preventDefault();
-        type("Duolingo Max");
-        switchDiv()
+       
     });
 
     option5.addEventListener('click', function (event) {
-        event.preventDefault();
-        type("Quem sou eu?");
-        switchDiv()
+       
     });
 
     option6.addEventListener('click', function (event) {
-        event.preventDefault();
-        type("Habilidades");
-        switchDiv()
+       
     });
 
     option7.addEventListener('click', function (event) {
-        event.preventDefault();
-        type("Meus projetos");
-        switchDiv()
+       
     });
 });
