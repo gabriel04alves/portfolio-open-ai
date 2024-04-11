@@ -23,6 +23,16 @@ body {
         color: #CECECE;
         max-width: 692px;
 }
+#typequestion{
+        padding: 10px;
+        margin-bottom: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #CECECE;
+        max-width: 692px;
+
+}
 
 .header {
     display: flex;

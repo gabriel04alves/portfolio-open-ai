@@ -21,17 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.style.display = 'block';
     }
     function question(text) {
+    const newText = "<strong>You </strong>" + text; 
         menu.innerHTML = "<div id='typequestion'></div>";
         const typequestion = document.getElementById('typequestion');
         typequestion.style.color = 'white';
         let index = 0;
         function typing() {
-            if (index < text.length) {
-            typequestion.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
+            if (index < newText.length) {
+                typequestion.innerHTML = newText.slice(0, index) + '<span class="blinking-cursor">||</span>';
                 index++;
                 setTimeout(typing, Math.random() * 15);
             } else {
-            typequestion.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
+                typequestion.innerHTML = newText.slice(0, index) + '<span class="blinking-cursor">||</span>';
             }
         }
         typing();
