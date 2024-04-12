@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let index = 0;
             function typing() {
                 if (index < text.length) {
-                    typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
+                    typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">|</span>';
                     index++;
-                    setTimeout(typing, Math.random() * 15);
+                    setTimeout(typing, Math.random() * 30);
                 } else {
-                    typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">||</span>';
+                    typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">|</span>';
                 }
             }
             typing();
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <div class="answer-div">
-                    <i class="icon-user bi bi-person-circle"></i>
+                    <img class="icon-open-ai" src="/portifolio-open-ai/src/assets/images/open-ai-logo-circle.svg" alt="">
                     <div class="text">
                         <p class="user-text">ChatGPT</p>
                         <p class="text">${answer}</p>
@@ -64,26 +64,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     option2.addEventListener('click', function(event) {
-        
+        typingAndWriter(
+        );
     });
 
     option3.addEventListener('click', function (event) {
-       
+        typingAndWriter(
+        );
     });
 
     option4.addEventListener('click', function (event) {
-       
+        typingAndWriter(
+        );
     });
 
     option5.addEventListener('click', function (event) {
-       
+        typingAndWriter(
+        );
+
     });
 
     option6.addEventListener('click', function (event) {
+        typingAndWriter(
+        );
        
     });
 
     option7.addEventListener('click', function (event) {
-       
+        typingAndWriter(
+        );       
     });
 });
