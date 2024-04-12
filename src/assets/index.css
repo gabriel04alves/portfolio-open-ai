@@ -13,6 +13,7 @@ body {
     font-weight: 600;
     font-size: 1.3rem;
     color: #FFF;
+    text-decoration: none;
 }
 
 .text-weak {
@@ -153,6 +154,7 @@ body {
     font-weight: 600;
     margin: 0 0 1vh 0;
 }
+
 
 .text {
     font-size: 1.1rem;
